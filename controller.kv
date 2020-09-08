@@ -1,0 +1,26 @@
+#:kivy 1.11.1
+
+<MenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Выбери питомца'
+            size_hint: 1, 0.1
+        Button:
+            text: 'Каксим Марасик'
+            on_press: app.clicker('karasik')
+        Button:
+            text: 'Бешанка'
+            on_press: app.clicker('beshenka')
+
+<ClickerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            on_press: app._click()
+            id: image
+        Label:
+            id: score
+            text: '0'
+            height: 2
+            size_hint: 1, 0.1
